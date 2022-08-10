@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <title>Hub</title>
+</head>
+
+
+<body>
+    <a href="/">
+        <div class="close"><span class="material-icons">
+                clear
+            </span></div>
+    </a>
+    <h1>Dispotivos Dormitorio</h1>
+
+
+    <div class="container" id="root">
+        <a href="/switchWiz">
+            <div class="device">
+                <div class="tipo"><i class="fa-solid fa-lightbulb"></i> </div>
+                <div class="name">luz Velador</div>
+            </div>
+        </a>
+        <a href="/switchEspejo">
+            <div class="device">
+                <div class="tipo"><i class="fa-solid fa-lightbulb"></i> </div>
+                <div class="name">luz espejo</div>
+            </div>
+        </a>
+
+        <div class="device">
+            <div class="tipo"><span class="material-icons">
+                    table_restaurant
+                </span></div>
+            <div class="name">luz escritorio</div>
+            <a href="/onEscritorio" id="btn" class="v">ON</a>
+            <a href="/offEscritorio" id="btn" class="r">OFF</a>
+        </div>
+        <div class="device">
+            <div class="tipo"><i class="fa-solid fa-swatchbook"></i> </div>
+            <div class="name">luCES LED'S</div>
+            <a href="/onLED" id="btn" class="v">ON</a>
+            <a href="/offLED" id="btn" class="r">OFF</a>
+        </div>
+        <div class="device">
+            <div class="tipo"><span class="material-icons">
+                    light
+                </span></div>
+            <div class="name">luz principal</div>
+            <a href="/" id="btn" class="v">ON</a>
+            <a href="/" id="btn" class="r">OFF</a>
+        </div>
+        <div class="adddevice">
+            <div class="tipo"><i class="fa-solid fa-plus"></i></div>
+            <div class="name">Nuevo Dispotivo</div>
+
+        </div>
+    </div>
+    <div id="reloj">
+        <div id="dia"></div>
+    </div>
+
+</body>
+
+
+<script src="../static/js/home.js"></script>
+<script src="https://kit.fontawesome.com/5200f3c9cc.js" crossorigin="anonymous"></script>
+
+<script>
+    function actual() {
+        fecha = new Date(); //Actualizar fecha.
+        hora = fecha.getHours(); //hora actual
+        minuto = fecha.getMinutes(); //minuto actual
+        segundo = fecha.getSeconds(); //segundo actual
+        if (hora < 10) { //dos cifras para la hora
+            hora = "0" + hora;
+        }
+        if (minuto < 10) { //dos cifras para el minuto
+            minuto = "0" + minuto;
+        }
+        if (segundo < 10) { //dos cifras para el segundo
+            segundo = "0" + segundo;
+        }
+        //ver en el recuadro del reloj:
+        mireloj = hora + " : " + minuto + " : " + segundo;
+        return mireloj;
+    }
+    function actualizar() { //función del temporizador
+        mihora = actual(); //recoger hora actual
+        mireloj = document.getElementById("reloj"); //buscar elemento reloj
+        mireloj.innerHTML = mihora; //incluir hora en elemento
+    }
+    setInterval(actualizar, 1000); //iniciar temporizador</script>
+
+</html>

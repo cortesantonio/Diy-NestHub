@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+    color: white;
+}
+
+#root {
+    width: 90%;
+    margin: 120px auto;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.566);
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2rem;
+}
+
+.img-notas {
+    max-width: 100%;
+    max-height: 100%;
+    height: 200px;
+    width: 200px;
+
+    border-radius:5px ;
+}
+
+.hora {
+    margin: 10px;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    height: 100%;
+    margin-top:75px ;
+}
+
+.titulo-notas {
+    text-align: justify;
+    padding: 25px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    font-size: 1.7rem;
+
+}
+
+.tarjeta {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.close a i{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.566);
+}
+
+.navFix{
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.771);
+}
+.enlace{
+    margin: 10px;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    height: 100%;
+    margin-top:75px ;
+    font-size: 2rem;
+    color: white;
+}
