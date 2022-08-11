@@ -24,7 +24,7 @@ def home():
     data = {
         'saludo' : estadodia
     }
-    return render_template('homee.html' ,data=data)
+    return render_template('index.html' ,data=data)
 @app.route('/devices')
 def devices():
     return render_template('home.html')

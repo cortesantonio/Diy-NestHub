@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NestHub DIY</title>
+</head>
+
+<body>
+    <div class="lock" id="lock">
+        <div id="reloj"></div>
+        <iframe
+            src="https://www.meteoblue.com/es/tiempo/widget/three/curic%c3%b3_chile_3892870?geoloc=fixed&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"
+            frameborder="0" scrolling="NO" allowtransparency="true"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+            style="width: 100%; height: 420px;margin: auto;"></iframe>
+        
+    </div>
+    <nav class="navfix">
+        <div class="accesos">
+            <a href="#lock">
+                <div style="font-size: 1.5rem;">Lock</div>
+            </a>
+            <a href="#space">
+                <div>Buenos dias</div>
+            </a>
+            <a href="#devices">
+                <div>Dispositivos</div>
+            </a>
+            <a href="">
+                <div>Musica</div>
+            </a>
+            <a href="">
+                <div>Noticias</div>
+            </a>
+        </div>
+        <div id="relojnav">00:00:00</div>
+    </nav>
+    <div id="space"></div>
+    <div class="inicio" id="inicio">
+
+        <div class="tiempo">
+            <iframe
+                src="https://www.meteoblue.com/en/weather/widget/three/curic%c3%b3_chile_3892870?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"
+                frameborder="0" scrolling="NO" allowtransparency="true"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                style="width: 90%; height: 100%; border-radius: 25px; ">
+            </iframe>
+        </div>
+        <div class="fecha">
+            <i class="fa-regular fa-calendar"></i>
+            <div class="dia">
+                <p>AGOSTO 18</p>
+                <p>2022</p>
+            </div>
+            <div class="actividades">
+                <p>Sin actividades agendadas</p>
+            </div>
+
+        </div>
+        <div class="lucesswitch">
+            <div class="estado"
+                style="position:absolute;top:165%;left:61%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
+                Off</div>
+            <i class="fa-regular fa-lightbulb"></i>
+            <div class="luces-ubicaciones">
+                <p>Switch Luces</p>
+                <p>Dormitorio</p>
+            </div>
+
+        </div>
+        <div class="media">
+            <div class="logo"><i class="fa-brands fa-spotify"></i></div>
+            <div class="cancion">
+                <div class="caratula"><i class="fa-solid fa-music"></i></div>
+                <div class="info-cancion">
+                    <p>DAKITI</p>
+                    <p>Bad Bunny</p>
+                </div>
+            </div>
+            <div class="controles">
+                <i class="fa-solid fa-backward"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-forward"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="devices" id="devices">
+        <div class="container-devices">
+            <a href="/switchWiz">
+                <div class="device-switch">
+                    <div class="estado"
+                        style="position:absolute;top:215%;left:27%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
+                        Off</div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="nombre-dispositivo">Luz Velador</div>
+                    <p>Dormitorio</p>
+                </div>
+            </a>
+            <a href="/switchEspejo">
+                <div class="device-switch">
+                    <div class="estado"
+                        style="position:absolute;top:215%;left:54%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
+                        Off</div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="nombre-dispositivo">Luz Espejo</div>
+                    <p>Dormitorio</p>
+                </div>
+            </a>
+            <a href="/onEscritorio">
+                <div class="device-switch">
+                    <div class="estado"
+                        style="position:absolute;top:215%;left:81%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
+                        Off</div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="nombre-dispositivo">Luz Escritorio</div>
+                    <p>Dormitorio</p>
+                </div>
+            </a>
+            <a href="/onLED">
+                <div class="device-switch">
+                    <div class="estado"
+                        style="position:absolute;top:249%;left:27%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
+                        Off</div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="nombre-dispositivo">Luces Led's</div>
+                    <p>Dormitorio</p>
+                </div>
+            </a>
+            <a href="/switchWiz">
+                <div class="device-switch">
+                    <div class="estado"
+                        style="position:absolute;top:249%;left:54%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
+                        Off</div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="nombre-dispositivo">Luz Principal</div>
+                    <p>Dormitorio</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="news" id="news">
+            <div class="container-news" id="root"></div>
+        </div>
+        <div class="music" id="music"></div>
+</body>
+<script src="../static/js/news.js"></script>
+<script src="../static/js/reloj.js"></script>
+
+</html>

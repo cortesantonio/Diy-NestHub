@@ -3,10 +3,15 @@ const root = document.getElementById('root')
 fetch(url)
     .then(res => res.json())
     .then(response => {
-        lista= response.ultimas
+        lista = response.ultimas
 
         for (let index = 0; index < lista.length; index++) {
             const N = lista[index]
+
+            const url = document.createElement('a')
+            url.href = N.url;
+            url.classList.add('enlace')
+
             const card = document.createElement("div");
             card.classList.add("tarjeta")
 
@@ -14,7 +19,7 @@ fetch(url)
             const tituloNota = document.createElement("p")
             tituloNota.innerHTML = N.title;
             tituloNota.classList.add("titulo-notas")
-            
+
             //imagen 
             const descripcionNota = document.createElement("img")
             descripcionNota.src = N.img;
@@ -23,17 +28,12 @@ fetch(url)
             const hora = document.createElement('div')
             hora.innerHTML = N.hour
             hora.classList.add('hora')
-            // enlace
-            const url = document.createElement('a')
-            url.href=N.url;
-            url.innerHTML = '<i class="fa-solid fa-angle-right"></i>'
-            url.classList.add('enlace')
 
+            
 
-
-            card.appendChild(descripcionNota);
-            card.appendChild(tituloNota)
-            card.appendChild(hora)
+            url.appendChild(descripcionNota);
+            url.appendChild(hora)
+            url.appendChild(tituloNota)
             card.appendChild(url)
             root.appendChild(card)
         }
