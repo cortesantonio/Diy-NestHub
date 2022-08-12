@@ -47,12 +47,3 @@ function actualizar2() { //función del temporizador
 }
 setInterval(actualizar2, 1000); //iniciar temporizador
 
-$(document).ready(function(){
-    var api_key="563492ad6f91700001000001ee0e9ca6636a40a2922a3057ed643c83"
-})
-    $("#form").submit(function(event){
-        event.preventDefault()
-       var search=$("#search").val()
-        imagesearch()
-    })
-   function imagesearch(){$.ajax(beforeSend())}

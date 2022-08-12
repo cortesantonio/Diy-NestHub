@@ -4,33 +4,22 @@ fetch(url)
     .then(res => res.json())
     .then(response => {
         lista = response.ultimas
-
-        for (let index = 0; index < lista.length; index++) {
+        for (let index = 0; index < 4; index++) {
             const N = lista[index]
-
             const url = document.createElement('a')
             url.href = N.url;
             url.classList.add('enlace')
-
             const card = document.createElement("div");
             card.classList.add("tarjeta")
-
-            //titulo
             const tituloNota = document.createElement("p")
             tituloNota.innerHTML = N.title;
             tituloNota.classList.add("titulo-notas")
-
-            //imagen 
             const descripcionNota = document.createElement("img")
             descripcionNota.src = N.img;
             descripcionNota.classList.add("img-notas")
-            //hora 
             const hora = document.createElement('div')
             hora.innerHTML = N.hour
             hora.classList.add('hora')
-
-            
-
             url.appendChild(descripcionNota);
             url.appendChild(hora)
             url.appendChild(tituloNota)
