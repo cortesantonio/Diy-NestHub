@@ -12,180 +12,41 @@
     <title>NestHub DIY</title>
 </head>
 
+
+
 <body>
-    <div class="lock" id="lock">
-        <div id="reloj"></div>
-        <p class="diaLock">{{data.dia}}</p>
-        <iframe
-            src="https://www.meteoblue.com/es/tiempo/widget/three/curic%c3%b3_chile_3892870?geoloc=fixed&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"
-            frameborder="0" scrolling="NO" allowtransparency="true"
-            sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
-            style="width: 100%; height: 420px;margin: auto;"></iframe>
-    </div>
-    <nav class="navfix">
-        <div class="accesos">
-            <a href="">
-                <div style="color: white;text-shadow: 1px 1px 3px black;"><i class="fa-solid fa-lock"></i>Lock</div>
-            </a>
-            <a href="#space">
-                <div>{{data.saludo}}</div>
-            </a>
-            <a href="#space2">
-                <div>Dispositivos</div>
-            </a>
-            <a href="">
-                <div>Musica</div>
-            </a>
-            <a href="#space4">
-                <div>Noticias</div>
-            </a>
-        </div>
-        <div id="relojnav">00:00:00</div>
-    </nav>
-    <hr>
-    <div id="space"></div>
-
-    <div class="inicio" id="inicio">
-
-        <div class="tiempo">
+    <div class="frame">
+        <div class="info">
+            <div id="reloj"></div>
+            <p class="diaLock">{{data.dia}}</p>
             <iframe
-                src="https://www.meteoblue.com/en/weather/widget/three/curic%c3%b3_chile_3892870?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"
+                src="https://www.meteoblue.com/es/tiempo/widget/three/curic%c3%b3_chile_3892870?geoloc=fixed&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"
                 frameborder="0" scrolling="NO" allowtransparency="true"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
-                style="width: 90%; height: 100%; border-radius: 25px;">
-            </iframe>
+                style="width: 90%; height: 210px;margin: 50px auto 0px; font-size: 14px;"></iframe>
         </div>
-        <div class="fecha">
-            <i class="fa-regular fa-calendar"></i>
-            <div class="dia">
-                <p>{{data.dia}}</p>
-                <p>2022</p>
-            </div>
-            <div class="actividades">
-                <p>Sin actividades agendadas</p>
-            </div>
-
-        </div>
-        <div class="lucesswitch">
-            <div class="estado"
-                style="position:absolute;top:165%;left:61%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
-                Off</div>
-            <i class="fa-regular fa-lightbulb"></i>
-            <div class="luces-ubicaciones">
-                <p>Switch Luces</p>
-                <p>Dormitorio</p>
-            </div>
-
-        </div>
-        <div class="media">
-            <div class="logo"><i class="fa-brands fa-spotify"></i></div>
-            <div class="cancion">
-                <div class="caratula"><i class="fa-solid fa-music"></i></div>
-                <div class="info-cancion">
-                    <p>DAKITI</p>
-                    <p>Bad Bunny</p>
+        <div class="dispositivos">
+            <a href="/switchWiz">
+                <div class="bttn">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <p>Velador </p>
+                    Switch
                 </div>
-            </div>
-            <div class="controles">
-                <i class="fa-solid fa-backward"></i>
-                <i class="fa-solid fa-play"></i>
-                <i class="fa-solid fa-forward"></i>
-            </div>
+            </a>
+            
+                <div class="bttn">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <p>Espejo </p><div class="flex"><a href="/onespejo">On</a>
+                    <a href="/offespejo">Off</a></div>
+                    
+                </div>
+            
+
         </div>
     </div>
 
-    <div id="space2"></div>
 
-
-    <div class="devices" id="devices">
-        <div class="titleDevices">Dispositivos de Dormitorio</div>
-        <div class="line"></div>
-        <div class="container-devices">
-            <div class="device-switch">
-                <a href="/wizoff">
-                    <div class="estado"
-                        style="position:absolute;top:237%;left:24%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
-                        Off</div>
-                </a>
-                <a href="/wizon">
-                    <div class="estado"
-                        style="position:absolute;top:249%;left:26%;font-size: 6rem;color: rgba(0, 0, 0, 0.221);">
-                        On</div>
-                </a>
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="nombre-dispositivo">Luz Velador</div>
-                <p>Dormitorio</p>
-            </div>
-            <div class="device-switch">
-                <a href="/offespejo">
-                    <div class="estado"
-                        style="position:absolute;top:237%;left:51%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
-                        Off</div>
-                </a>
-                <a href="/onespejo">
-                    <div class="estado"
-                        style="position:absolute;top:249%;left:53%;font-size: 6rem;color: rgba(0, 0, 0, 0.221);">
-                        On</div>
-                </a>
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="nombre-dispositivo">Luz Espejo</div>
-                <p>Dormitorio</p>
-            </div>
-            <div class="device-switch">
-                <a href="/offEscritorio">
-                    <div class="estado"
-                        style="position:absolute;top:237%;left:78%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
-                        Off</div>
-                </a>
-                <a href="/onEscritorio">
-                    <div class="estado"
-                        style="position:absolute;top:249%;left:80%;font-size: 6rem;color: rgba(0, 0, 0, 0.221);">
-                        On</div>
-                </a>
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="nombre-dispositivo">Luz Escritorio</div>
-                <p>Dormitorio</p>
-            </div>
-            <div class="device-switch">
-                <a href="/offLED">
-                    <div class="estado"
-                        style="position:absolute;top:274%;left:24%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
-                        Off</div>
-                </a>
-                <a href="/onLED">
-                    <div class="estado"
-                        style="position:absolute;top:285%;left:26%;font-size: 6rem;color: rgba(0, 0, 0, 0.221);">
-                        On</div>
-                </a>
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="nombre-dispositivo">Luces Led's</div>
-                <p>Dormitorio</p>
-            </div>
-            <div class="device-switch">
-                <a href="">
-                    <div class="estado"
-                        style="position:absolute;top:274%;left:51%;font-size: 6rem;color: rgba(0, 0, 0, 0.112);">
-                        Off</div>
-                </a><a href="">
-                    <div class="estado"
-                        style="position:absolute;top:285%;left:53%;font-size: 6rem;color: rgba(0, 0, 0, 0.221);">
-                        On</div>
-                </a>
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="nombre-dispositivo">Luz Principal</div>
-                <p>Dormitorio</p>
-            </div>
-        </div>
-
-        <div id="space4"></div>
-        <div class="titleNews">Noticias</div>
-        <div class="line"></div>
-        <div class="news" id="news">
-            <div class="container-news" id="root"></div>
-        </div>
-        <div class="music" id="music"></div>
+    <script src="static/js/reloj.js"></script>
 </body>
-<script src="../static/js/news.js"></script>
-<script src="../static/js/reloj.js"></script>
 
 </html>
